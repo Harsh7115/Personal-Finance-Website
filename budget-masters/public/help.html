@@ -1,0 +1,144 @@
+<!-- public/help.html -->
+<!-- Contributors: Harshit Jain, Ashish Dev Choudhary, Shivansh Singh, Advik Bargoti -->
+<!-- HTML file for setting up Help Page Functionality -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetMasters - Help</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <h1>BudgetMasters</h1>
+        <ul>
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/expenses.html">Expenses</a></li>
+            <li><a href="/charts.html">Charts</a></li>
+            <li><a href="/leaderboard.html">Leaderboard</a></li>
+            <li><a href="/help.html" class="active">Help</a></li>
+        </ul>
+        <div class="user-info">
+            <span id="username"></span>
+            <button class="btn-secondary" id="logoutBtn">Logout</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <h1>Help Center</h1>
+
+        <div class="help-search">
+            <input type="text" id="searchHelp" placeholder="Search help topics...">
+        </div>
+
+        <div class="help-container">
+            <div class="help-sidebar">
+                <h2>Topics</h2>
+                <ul class="help-topics">
+                    <li><a href="#getting-started" class="active">Getting Started</a></li>
+                    <li><a href="#managing-budgets">Managing Budgets</a></li>
+                    <li><a href="#tracking-expenses">Tracking Expenses</a></li>
+                    <li><a href="#using-charts">Using Charts</a></li>
+                    <li><a href="#leaderboard-info">Leaderboard</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="help-content">
+                <section id="getting-started" class="help-section">
+                    <h2>Getting Started</h2>
+                    <div class="help-card">
+                        <h3>Creating Your Account</h3>
+                        <p>BudgetMasters uses a simple username-based login system. To get started:</p>
+                        <ol>
+                            <li>Visit the login page</li>
+                            <li>Enter your desired username</li>
+                            <li>Click "Login/Register"</li>
+                            <li>If the username exists, you'll log in; if not, a new account will be created</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section id="managing-budgets" class="help-section">
+                    <h2>Managing Budgets</h2>
+                    <div class="help-card">
+                        <h3>Creating a Budget</h3>
+                        <p>To create a new budget:</p>
+                        <ol>
+                            <li>Click "Create New Budget" on the dashboard</li>
+                            <li>Enter the budget name</li>
+                            <li>Set the total budget limit</li>
+                            <li>Add categories and their individual limits</li>
+                            <li>Click "Create Budget" to save</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section id="tracking-expenses" class="help-section">
+                    <h2>Tracking Expenses</h2>
+                    <div class="help-card">
+                        <h3>Adding Expenses</h3>
+                        <p>To log a new expense:</p>
+                        <ol>
+                            <li>Go to the Expenses page or click "Add Expense" on a budget card</li>
+                            <li>Select the budget and category</li>
+                            <li>Enter the amount and description</li>
+                            <li>Select the date</li>
+                            <li>Click "Add Expense" to save</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section id="using-charts" class="help-section">
+                    <h2>Using Charts</h2>
+                    <div class="help-card">
+                        <h3>Understanding Your Data</h3>
+                        <p>The Charts page provides visual insights into your spending:</p>
+                        <ul>
+                            <li>Pie Chart: Shows spending distribution across categories</li>
+                            <li>Bar Chart: Displays monthly spending trends</li>
+                            <li>Use filters to analyze specific time periods or budgets</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="leaderboard-info" class="help-section">
+                    <h2>Leaderboard</h2>
+                    <div class="help-card">
+                        <h3>Understanding Rankings</h3>
+                        <p>The leaderboard ranks users based on their savings percentage:</p>
+                        <ul>
+                            <li>Rankings update automatically as you manage your budgets</li>
+                            <li>Higher savings percentages lead to better rankings</li>
+                            <li>Filter rankings by different time periods</li>
+                            <li>View your personal stats at the top of the page</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="faq" class="help-section">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="help-card">
+                        <h3>Common Questions</h3>
+                        <div class="faq-item">
+                            <h4>How is my savings percentage calculated?</h4>
+                            <p>Your savings percentage is calculated as: (Total Budget - Total Spent) / Total Budget × 100</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Can I edit or delete expenses?</h4>
+                            <p>Yes, you can edit or delete expenses from the Expenses page using the action buttons next to each expense.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>How often is the leaderboard updated?</h4>
+                            <p>The leaderboard updates in real-time as users log their expenses and manage their budgets.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/help.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- public/charts.html -->
+<!-- Contributors: Harshit Jain, Ashish Dev Choudhary, Shivansh Singh, Advik Bargoti -->
+<!-- HTML file for setting up Charts Functionality -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetMasters - Charts</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <nav class="sidebar">
+        <h1>BudgetMasters</h1>
+        <ul>
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/expenses.html">Expenses</a></li>
+            <li><a href="/charts.html" class="active">Charts</a></li>
+            <li><a href="/leaderboard.html">Leaderboard</a></li>
+            <li><a href="/help.html">Help</a></li>
+        </ul>
+        <div class="user-info">
+            <span id="username"></span>
+            <button id="logoutBtn" class="btn-secondary">Logout</button>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1>Spending Analytics</h1>
+
+        <div class="filters mb-1">
+            <div class="form-group">
+                <label for="budgetSelect">Budget</label>
+                <select id="budgetSelect" class="form-control">
+                    <option value="all">All Budgets</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="timeRange">Time Range</label>
+                <select id="timeRange" class="form-control">
+                    <option value="month">Last Month</option>
+                    <option value="year">Last Year</option>
+                    <option value="all" selected>All Time</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container">
+                <h2>Spending by Category</h2>
+                <div id="categoryChart"></div>
+            </div>
+
+            <div class="chart-container">
+                <h2>Spending Trends Over Time</h2>
+                <div id="trendChart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/charts.js"></script>
+</body>
+</html>

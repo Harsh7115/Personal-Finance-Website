@@ -1,0 +1,102 @@
+<!-- public/expenses.html -->
+<!-- Contributors: Harshit Jain, Ashish Dev Choudhary, Shivansh Singh, Advik Bargoti -->
+<!-- HTML file for setting up Expenses Functionality -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetMasters - Expenses</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <h1>BudgetMasters</h1>
+        <ul>
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/expenses.html" class="active">Expenses</a></li>
+            <li><a href="/charts.html">Charts</a></li>
+            <li><a href="/leaderboard.html">Leaderboard</a></li>
+            <li><a href="/help.html">Help</a></li>
+        </ul>
+        <div class="user-info">
+            <span id="username"></span>
+            <button class="btn-secondary" id="logoutBtn">Logout</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <h1>Expenses</h1>
+        
+        <div class="filters">
+            <div class="form-group">
+                <label for="budgetFilter">Budget</label>
+                <select id="budgetFilter">
+                    <option value="all">All Budgets</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="categoryFilter">Category</label>
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dateFilter">Time Period</label>
+                <select id="dateFilter">
+                    <option value="all">All Time</option>
+                    <option value="today">Today</option>
+                    <option value="week">This Week</option>
+                    <option value="month">This Month</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="expenses-table-container">
+            <table class="expenses-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Budget</th>
+                        <th>Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="expensesTableBody">
+                    <!-- Expenses will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Edit Expense Modal -->
+        <div id="editExpenseModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Edit Expense</h2>
+                <form id="editExpenseForm">
+                    <input type="hidden" id="editExpenseId">
+                    <div class="form-group">
+                        <label for="editAmount">Amount ($)</label>
+                        <input type="number" id="editAmount" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editDescription">Description</label>
+                        <input type="text" id="editDescription" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editDate">Date</label>
+                        <input type="date" id="editDate" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closeEditModal()">Cancel</button>
+                        <button type="submit" class="btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/expenses.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!-- public/index.html -->
+<!-- Contributors: Harshit Jain, Ashish Dev Choudhary, Shivansh Singh, Advik Bargoti -->
+<!-- HTML file for setting up Leaderboard Functionality -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - BudgetMasters</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar">
+        <h1>BudgetMasters</h1>
+        <ul>
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/expenses.html">Expenses</a></li>
+            <li><a href="/charts.html">Charts</a></li>
+            <li><a href="/leaderboard.html" class="active">Leaderboard</a></li>
+            <li><a href="/help.html">Help</a></li>
+        </ul>
+        <div class="user-info">
+            <span id="username"></span>
+            <button id="logoutBtn" class="btn-secondary">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1>Savings Leaderboard</h1>
+        
+        <!-- Leaderboard Header with User Stats -->
+        <div class="leaderboard-header">
+            <!-- Time Filter -->
+            <div class="time-filter">
+                <select id="timeRange">
+                    <option value="month">This Month</option>
+                    <option value="year">This Year</option>
+                    <option value="all">All Time</option>
+                </select>
+            </div>
+
+            <!-- User Stats Cards -->
+            <div class="user-stats">
+                <div class="stat-card">
+                    <h3>Your Rank</h3>
+                    <p id="userRank">#0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Your Savings</h3>
+                    <p id="userSavings">$0.00</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Savings Rate</h3>
+                    <p id="userSavingsRate">0%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Leaderboard Container -->
+        <div class="leaderboard-container">
+            <!-- Error Message Container -->
+            <div class="leaderboard-error"></div>
+
+            <!-- Top 3 Users Section -->
+            <div class="leaderboard-top">
+                <!-- Will be populated by JavaScript -->
+            </div>
+
+            <!-- Remaining Users List -->
+            <div class="leaderboard-list">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/leaderboard.js"></script>
+</body>
+</html>
