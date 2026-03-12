@@ -58,3 +58,5 @@ npm start
 ```
 
 **Requirements:** Node.js 16+, MongoDB (local or Atlas)
+
+<!-- Last reviewed: March 2026 -->
